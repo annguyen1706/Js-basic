@@ -109,13 +109,103 @@
 // console.log(languages2.concat(languages));
 
 // 9- slice
-let languages = [
-    'Javascript',
-    'PHP',
-    'Ruby'
+// let languages = [
+//     'Javascript',
+//     'PHP',
+//     'Ruby'
+// ];
+
+// console.log(languages.slice(-2, -1));
+
+
+
+
+let courses = [
+    {
+        id: 1,
+        name: 'Javascript',
+        coin: 250
+
+    },
+    {
+        id: 2,
+        name: 'HTML, CSS',
+        coin: 0
+    },
+    {
+        id: 3,
+        name: 'Ruby',
+        coin: 0
+    },
+    {
+        id: 2,
+        name: 'PHP',
+        coin: 500
+    }
 ];
 
-console.log(languages.slice(-2, -1));
 
 
+//  10 - forEach() - duyệt qua từng phần tử của mảng
+// courses.forEach(function(course, index){
+//     console.log(index, course);
     
+// });
+
+
+// 11 - every() - tất cả phần tử trong mảng thỏa mãn điều kiện nào đó
+// let isFree = courses.every(function(course, index){
+//     return course.coin === 0;
+    
+// });
+// console.log(isFree);
+
+
+// 12 - some() - chỉ cần 1 phần tử thỏa mãn điều kiện
+
+// let isFree = courses.some(function(course, index){
+//     return course.coin === 0;
+    
+// });
+// console.log(isFree);
+
+
+// 13 - find() - tìm phần tử- chỉ tìm 1 phần tử đầu tiên tìm đc
+
+
+// let course = courses.find(function(course, index){
+//     return course.name === 'Ruby';
+    
+// });
+// console.log(course);
+
+
+// 14 - filter()- tìm phần tử- tìm đc tất cả phần tử thỏa mãn
+
+
+
+
+// 15 - map()
+// function courseHandler(course) {
+//         //console.log(course);
+//         return {
+//             id: course.id,
+//             name: `khoa học: ${course.name}`,
+//             coin: course.coin,
+//             coinText: `Gia: ${course.coin}`,
+//         }
+        
+// };
+// let newCourses = courses.map(courseHandler);
+// console.log(newCourses);
+
+
+
+// 16 - reduce()
+
+// tính tổng tiền khóa học
+let totalCoin = courses.reduce(function(total, course) {
+    return total + course.coin;
+}, 0);
+console.log(totalCoin);
+
