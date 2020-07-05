@@ -120,29 +120,29 @@
 
 
 
-let courses = [
-    {
-        id: 1,
-        name: 'Javascript',
-        coin: 250
+// let courses = [
+//     {
+//         id: 1,
+//         name: 'Javascript',
+//         coin: 250
 
-    },
-    {
-        id: 2,
-        name: 'HTML, CSS',
-        coin: 0
-    },
-    {
-        id: 3,
-        name: 'Ruby',
-        coin: 0
-    },
-    {
-        id: 2,
-        name: 'PHP',
-        coin: 500
-    }
-];
+//     },
+//     {
+//         id: 2,
+//         name: 'HTML, CSS',
+//         coin: 0
+//     },
+//     {
+//         id: 3,
+//         name: 'Ruby',
+//         coin: 0
+//     },
+//     {
+//         id: 2,
+//         name: 'PHP',
+//         coin: 500
+//     }
+// ];
 
 
 
@@ -204,8 +204,78 @@ let courses = [
 // 16 - reduce()
 
 // tính tổng tiền khóa học
-let totalCoin = courses.reduce(function(total, course) {
-    return total + course.coin;
-}, 0);
-console.log(totalCoin);
+// let totalCoin = courses.reduce(function(total, course) {
+//     return total + course.coin;
+// }, 0);
+// console.log(totalCoin);
 
+
+// flat - làm phẳng mảng tử depth array - mảng sâu
+// let depthArray = [1, 2, [3, 4], 5, 6, [7, 8, 9]];
+// let flatArray = depthArray.reduce(function(flatOutput, depthItem) {
+//     return flatOutput.concat(depthItem);
+// }, []);
+// console.log(flatArray)
+
+
+// lấy ra các khóa học đưa vào 1 mảng mới
+
+// let topics = [
+//     {
+//         topic: 'Front- end',
+//         courses: [
+//             {
+//                 id: 1,
+//                 title: 'HTML, CSS'
+//             },
+//             {
+//                 id: 2,
+//                 title: 'Javascript'
+//             }
+//         ]
+//     },
+//     {
+//         topic: 'Back - end',
+//         courses: [
+//             {
+//                 id: 1,
+//                 title: 'PHP'
+//             },
+//             {
+//                 id: 2, 
+//                 title: 'NodeJS'
+//             }
+//         ]
+//     }
+// ];
+
+// let newCourses = topics.reduce(function(courses, topic) {
+//     return courses.concat(topic.courses)
+// },[]);
+// console.log(newCourses);
+
+// let htmls = newCourses.map(function(course) {
+//     return `
+//         <div>
+//             <h2>${course.title}</h2>
+//             <p>ID: ${course.id}</p>
+//         </div>
+//     `;
+// });
+// console.log(htmls.join(''));
+
+
+
+
+// includes method
+
+let title = 'responsive web design';
+console.log(title.includes('web'));
+console.log(title.includes('responsive', 1));
+
+
+let courses = ['javascript', 'PHP', 'Dart'];
+console.log(courses.includes('javascript',-3));
+
+
+// Polyfill?
