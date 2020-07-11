@@ -25,17 +25,38 @@
 
 
 // callback
-Array.prototype.map2 = function() {
+// Array.prototype.map2 = function(callback) {
+//    for (let i =0; i < this.length; i++) {
+//     let result = callback(this[i],i);
+//     console.log('result: ', result);
+    
+//    }
+// }
+// let courses = [
+//     'javascript',
+//     'PHP',
+//     'Ruby'
+// ];
 
-}
-let courses = [
-    'javascript',
-    'PHP',
-    'Ruby'
-];
-
-courses.map2()
+// let htmls = courses.map2(function(course, index) {
+//     return `<h2>${course}</h2>`;
+    
+// });
 // let htmls = courses.map(function(course) {
 //     return `<h2>${course}</h2>`
 // });
 // console.log(htmls.join(''));
+
+
+
+// forEach method
+
+// let courses = [
+//          'javascript',
+//          'PHP',
+//          'Ruby'
+//      ];
+//     let output = courses.forEach(function(course, index, array) {
+//          console.log(course, index, array);
+         
+//      })
